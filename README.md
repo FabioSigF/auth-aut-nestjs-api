@@ -53,6 +53,8 @@ npm install
 ```bash
 DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
 AUTH_JWT_SECRET="chave-secreta-segura"
+AUTH_JWT_ISSUER="mobile-auth-service"
+AUTH_JWT_AUDIENCE="mobile-api-users"
 ```
 
 ### 2. Gere o cliente Prisma e execute as migrações:
