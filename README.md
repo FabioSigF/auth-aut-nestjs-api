@@ -82,3 +82,64 @@ npm run start:prod
 ```
 
 Compila e inicia a aplicação em modo de produção.
+
+## Rotas
+
+### Cadastro de usuário
+
+**Endpoint:** `POST /auth/register`
+
+**Exemplo de requisição:**
+
+```bash
+POST http://localhost:3000/auth/register
+
+"Content-Type: application/json"
+  '{
+    "name": "Fabio Freitas",
+    "email": "fabio@example.com",
+    "password": "123456"
+  }'
+```
+
+**Resposta esperada:**
+
+```json
+{
+  "id": 1,
+  "name": "Fabio Freitas",
+  "email": "fabio@example.com",
+  "createdAt": "2025-10-30T12:00:00.000Z"
+}
+
+```
+
+### Login
+
+**Endpoint:** `POST /auth/login`
+
+**Exemplo de requisição:**
+
+```bash
+POST http://localhost:3000/auth/login 
+
+"Content-Type: application/json" 
+  '{
+    "email": "fabio@example.com",
+    "password": "123456"
+  }'
+```
+
+**Resposta esperada:**
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI..."
+}
+```
+
+Guarde o access_token retornado — ele deve ser usado no header Authorization das próximas requisições:
+
+```
+Authorization: Bearer <token>
+```
