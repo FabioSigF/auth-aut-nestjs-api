@@ -87,16 +87,15 @@ Compila e inicia a aplicação em modo de produção.
 
 ### Cadastro de usuário
 
-**Endpoint:** `POST /auth/register`
+**Endpoint:** `POST /users`
 
 **Exemplo de requisição:**
 
 ```bash
-POST http://localhost:3000/auth/register
+POST http://localhost:3000/users
 
 "Content-Type: application/json"
   '{
-    "name": "Fabio Freitas",
     "email": "fabio@example.com",
     "password": "123456"
   }'
@@ -106,10 +105,12 @@ POST http://localhost:3000/auth/register
 
 ```json
 {
-  "id": 1,
-  "name": "Fabio Freitas",
+  "id": "cmighjfaq0000mvn8ib415l7s",
   "email": "fabio@example.com",
-  "createdAt": "2025-10-30T12:00:00.000Z"
+  "password": "$2b$10$9QzauCakfwA1r9RxfcRYV.6s.maQg29GXUGwE9Vu9B7R5JYtzU032",
+  "role": "USER",
+  "createdAt": "2025-11-26T20:56:50.713Z",
+  "updatedAt": "2025-11-26T20:56:50.713Z"
 }
 
 ```
